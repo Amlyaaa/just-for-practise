@@ -1,0 +1,13 @@
+<div>
+    <input type="checkbox" [(ngModel)]="showSchedule"> Schedule
+  </div>
+  
+  <div *ngIf="showSchedule">
+    <label>Date:</label>
+    <!-- Date picker -->
+    <input type="text" [(ngModel)]="selectedDate" (click)="openDatePicker()">
+    <!-- Time picker -->
+    <label>Time:</label>
+    <input type="text" [(ngModel)]="selectedTime" (click)="openTimePicker()">
+  </div>
+  
